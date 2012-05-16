@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF" >
+
+    <ProgressBar
+        android:id="@+id/progress_search"
+        style="@android:style/Widget.ProgressBar.Inverse"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+    
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:layout_gravity="center" >
+        
+        <EditText 
+            android:id="@+id/search_text"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:hint="@string/TwitterSearch_SearchHint" >
+            
+            <requestFocus />
+            
+        </EditText>
+        
+       	<LinearLayout 
+        	android:id="@+id/login_logout"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="10dp"
+        	android:layout_gravity="center" >
+        
+        <Button
+            android:id="@+id/search_tweets"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/TwitterSearch_Search" />
+        
+        <Button
+            android:id="@+id/stop_search"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/TwitterSearch_Stop"
+            android:visibility="gone" />
+        
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <ListView 
+        android:id="@+id/result"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/header"
+        android:cacheColorHint="#FFFFFF" />
+
+</RelativeLayout>

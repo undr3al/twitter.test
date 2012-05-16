@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF" >
+
+    <RelativeLayout 
+        android:id="@+id/upper_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/top_bar_style" >
+        
+        <ImageView 
+            android:id="@+id/user_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true" />
+        
+    	<TextView
+    	    android:id="@+id/username"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_centerVertical="true"
+    	    android:layout_marginLeft="5dp"
+    	    android:textColor="#FFFFFF"
+    	    android:layout_toRightOf="@+id/user_image" />
+        
+    	<LinearLayout 
+        	android:id="@+id/login_logout"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_centerVertical="true"
+        	android:layout_alignParentRight="true" >
+
+    		<Button
+        		android:id="@+id/logout"
+        		android:layout_width="70dp"
+        		android:layout_height="wrap_content"
+        		android:layout_marginTop="5dp"
+        		android:visibility="gone"
+        		android:text="@string/TwitterClient_Logout" />
+    		
+    		<Button
+    	   		android:id="@+id/login"
+    	    	android:layout_width="70dp"
+    	    	android:layout_marginTop="5dp"
+    	    	android:layout_height="wrap_content"
+    	    	android:text="@string/TwitterClient_Login" />
+    		
+    		<ProgressBar 
+    		    android:id="@+id/progress_login"
+        		style="@android:style/Widget.ProgressBar.Small"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_marginTop="5dp"
+        		android:layout_marginRight="15dp"
+        		android:visibility="gone"/>
+    
+    	</LinearLayout>
+        
+    </RelativeLayout>
+
+    
+    <EditText
+        android:id="@+id/twitt_text"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/upper_bar"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:gravity="top"
+        android:lines="3"
+        android:inputType="textMultiLine" >
+
+    </EditText>
+    
+    <LinearLayout 
+       	android:id="@+id/tweet_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/twitt_text" >
+        
+            <Button
+        		android:id="@+id/clear"
+        		android:layout_width="100dp"
+        		android:layout_height="wrap_content"
+        		android:layout_marginTop="10dp"
+        		android:text="@string/TwitterClient_Clear" />
+
+            <ProgressBar
+                android:id="@+id/progress_tweet"
+                style="@android:style/Widget.ProgressBar.Small.Inverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:visibility="gone" />
+
+            <Button
+        		android:id="@+id/tweet"
+        		android:layout_width="100dp"
+        		android:layout_height="wrap_content"
+        		android:layout_marginTop="10dp"
+        		android:text="@string/TwitterClient_Tweet" />
+            
+    	</LinearLayout>
+
+    <Button
+        android:id="@+id/timeline"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tweet_controls"
+        android:text="@string/TwitterClient_Timeline" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/timeline"
+        android:text="@string/TwitterClient_Search" />
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, TwitterClient!</string>
+    <string name="app_name">TwitterClient</string>
+    <string name="TwitterClient_LoginText">Login Text</string>
+    <string name="TwitterClient_Login">Login</string>
+    <string name="TwitterClient_Logout">Logout</string>
+    <string name="TwitterClient_Timeline">Timeline</string>
+    <string name="TwitterClient_Search">Search tweets</string>
+    <string name="TwitterClient_Tweet">Tweet</string>
+    <string name="TwitterClient_Clear">Clear</string>
+    <string name="TwitterSearch_SearchHint">Search Twitter</string>
+    <string name="TwitterSearch_Search">Search</string>
+    <string name="TwitterTimeline_LoadMore">Show more tweets</string>
+    <string name="TwitterTimeline_Refresh">Refresh</string>
+    <string name="TwitterSearch_Stop">Stop</string>
+
+</resources>

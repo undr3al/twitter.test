@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF" >
+    
+    <RelativeLayout 
+        android:id="@+id/top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/top_bar_style" >
+        
+        <TextView 
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="#FFFFFF"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/button_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:text="@string/TwitterTimeline_Refresh"
+            android:gravity="center" />
+
+    </RelativeLayout>
+        
+    <ListView 
+        android:id="@+id/tweet_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/top_bar"
+        android:cacheColorHint="#FFFFFF"
+        android:visibility="gone" />
+    
+    <ProgressBar
+        android:id="@+id/progress_load_timeline"
+        style="@android:style/Widget.ProgressBar.Inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+        
+</RelativeLayout>    
+        
+    
+        
